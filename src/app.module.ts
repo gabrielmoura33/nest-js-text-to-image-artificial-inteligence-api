@@ -1,9 +1,21 @@
 import { Module } from '@nestjs/common';
 
-import { OpenAIModule } from './modules/openAI/open-ai.module';
+import { ConfigModule } from '@nestjs/config';
+import path from 'path';
+import { OpenAIModule } from './modules/open-ai/open-ai.module';
 
 @Module({
-  imports: [OpenAIModule],
+  imports: [
+    OpenAIModule,
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: path.resolve(
+        __dirname,
+        'environments',
+        `${process.env.NODE_ENV || 'development'}.env`,
+      ),
+    }),
+  ],
   controllers: [],
   providers: [],
 })
