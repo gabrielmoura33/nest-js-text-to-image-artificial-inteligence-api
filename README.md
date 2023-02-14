@@ -18,7 +18,7 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
 
-Este Projeto foi criado com o intuito de criar uma API Rest utilizando o framework [**NestJS**](https://nestjs.com) para integrar com os dois modelos de inteligencia artificial _text-to-image_ mais conhecidos atualmente([**Stabble Difusion**](https://stability.ai/blog/stable-diffusion-public-release) e [**Dall-E 2**](https://openai.com/dall-e-2/)). Neste projeto estaremos disponibilizando endpoints para utilizar as diversas funcionalidades de geração / edição de imagens utilizando inteligencia artificial. Tambem utilizaremos o [**Image Magic**](https://imagemagick.org/index.php), um software open-source para a edição de imagens utilizado para adequar as imagens recebidas para o formato aceito pelo respectivo modelo.
+Este Projeto foi criado com o intuito de criar uma API Rest utilizando o framework [**NestJS**](https://nestjs.com) para integrar com os dois modelos de inteligencia artificial _text-to-image_ mais conhecidos atualmente([**Stabble Difusion**](https://stability.ai/blog/stable-diffusion-public-release) e [**Dall-E 2**](https://openai.com/dall-e-2/)). Neste projeto estaremos disponibilizando endpoints para utilizar as funcionalidades de geração / edição de imagens utilizando inteligencia artificial, tambem utilizaremos o [**Image Magic**](https://imagemagick.org/index.php), um software open-source para a edição de imagens utilizado para adequar as imagens recebidas para o formato aceito pelo respectivo modelo e criaremos uma arquitetura utilizando o banco de dados **Redis** para gerenciamento de filas e concorrencia para a geração das imagens.
 
 <!--
 [![](https://img.shields.io/pypi/v/mvt)](https://pypi.org/project/mvt/)
@@ -36,7 +36,12 @@ Este Projeto foi criado com o intuito de criar uma API Rest utilizando o framewo
 
 ## :books: Tecnologias Utilizadas
 
-- [**Node.js**](https://nodejs.org/en/).
+- [**Node.js**](https://nodejs.org/en/) + [**NestJS**](https://nestjs.com)
+- [**ImageMagick**](https://imagemagick.org/index.php)
+- [**Stabble Difusion**](https://stability.ai/blog/stable-diffusion-public-release)
+- [**Dall-E 2**](https://openai.com/dall-e-2/))
+- [**Bull Queue**](https://github.com/OptimalBits/bull)
+- [**Redis**](https://redis.io)
 
 <!--
 ## Usage
