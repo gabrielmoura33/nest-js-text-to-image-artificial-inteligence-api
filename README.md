@@ -3,16 +3,16 @@
 </p>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/gabrielmoura33/descomplica-smasy">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/gabrielmoura33/nest-js-text-to-image-artificial-inteligence-api">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/gabrielmoura33/descomplica-smasy">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/gabrielmoura33/nest-js-text-to-image-artificial-inteligence-api">
   
   <a href="https://github.com/WallysonGalvao/rocketseat-gobarber/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/gabrielmoura33/descomplica-smasy">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/gabrielmoura33/nest-js-text-to-image-artificial-inteligence-api">
   </a>
 
   <a href="https://github.com/WallysonGalvao/rocketseat-gobarber/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/gabrielmoura33/descomplica-smasy">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/gabrielmoura33/nest-js-text-to-image-artificial-inteligence-api">
   </a>
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
