@@ -26,6 +26,6 @@ export default class CreateStorageSingleImage {
       buffer,
       `${Date.now()}.png`,
     );
-    return path;
+    return { path };
   }
 }

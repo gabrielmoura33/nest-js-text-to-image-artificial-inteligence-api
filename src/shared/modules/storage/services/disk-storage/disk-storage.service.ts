@@ -2,7 +2,6 @@ import { Injectable } from '@nestjs/common';
 import fs from 'fs';
 import path from 'path';
 import { StorageService } from '../../interfaces/storage.interfaces';
-
 @Injectable()
 export default class DiskStorageService implements StorageService {
   saveFile(file: Buffer, filename: string): string {
@@ -12,8 +11,7 @@ export default class DiskStorageService implements StorageService {
       '..',
       '..',
       '..',
-      '..',
-      'storage',
+      'tmp',
       filename,
     );
     fs.writeFileSync(filePath, file);
