@@ -1,8 +1,12 @@
+import { CreateImageRequestSizeEnum, ImagesResponse } from 'openai';
+
+export interface ImageGenerarionProps {
+  prompt: string;
+  n: number;
+  size: CreateImageRequestSizeEnum;
+}
 export abstract class ImageGenerationService {
-  abstract generateSingleImage(): Promise<void>;
-  abstract editSingleImage(): Promise<void>;
-  abstract generateSingleVariation(): Promise<void>;
-  abstract generateMultipleImages(): Promise<void>;
-  abstract editMultipleImages(): Promise<void>;
-  abstract generateMultipleVariations(): Promise<void>;
+  abstract CreateImage(data: ImageGenerarionProps): Promise<ImagesResponse>;
+  abstract CreateImageEdit(): Promise<void>;
+  abstract CreateImageVariation(): Promise<void>;
 }
