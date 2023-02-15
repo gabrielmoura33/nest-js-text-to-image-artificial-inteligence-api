@@ -4,6 +4,7 @@ import { Configuration, ImagesResponse, OpenAIApi } from 'openai';
 import {
   ImageGenerarionProps,
   ImageGenerationService,
+  ImageVariationProps,
 } from '../../interfaces/image-generation.interfaces';
 @Injectable()
 export class DallEService implements ImageGenerationService {
@@ -17,18 +18,40 @@ export class DallEService implements ImageGenerationService {
       }),
     );
   }
-  async CreateImage(data: ImageGenerarionProps): Promise<ImagesResponse> {
+
+  public async CreateImage(
+    data: ImageGenerarionProps,
+  ): Promise<ImagesResponse> {
     try {
-      const response = await this.OpenAIApiClient.createImage(data);
+      const response = await this.OpenAIApiClient.createImage({
+        ...data,
+        n: data.n || 1,
+      });
       return response.data;
     } catch (error) {
       throw new Error(error);
     }
   }
-  CreateImageEdit(): Promise<void> {
-    throw new Error('Method not implemented.');
+
+  public async CreateImageVariation({
+    image,
+    n,
+    size,
+  }: ImageVariationProps): Promise<ImagesResponse> {
+    try {
+      const response = await this.OpenAIApiClient.createImageVariation(
+        image,
+        n || 1,
+        size,
+      );
+
+      return response.data;
+    } catch (error) {
+      throw new Error(error);
+    }
   }
-  CreateImageVariation(): Promise<void> {
+
+  CreateImageEdit(): Promise<void> {
     throw new Error('Method not implemented.');
   }
 }

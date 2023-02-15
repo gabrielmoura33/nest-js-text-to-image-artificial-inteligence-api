@@ -22,10 +22,7 @@ export default class CreateStorageSingleImage {
     const blob = await imgResult.blob();
     const buffer = Buffer.from(await blob.arrayBuffer());
 
-    const path = await this.storageService.saveFile(
-      buffer,
-      `${Date.now()}.png`,
-    );
+    const path = this.storageService.saveFile(buffer, `${Date.now()}.png`);
     return { path };
   }
 }
